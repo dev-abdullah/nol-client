@@ -6,7 +6,7 @@ export const signinUser = ({ email, password }) => (dispatch) => {
 
   const body = JSON.stringify({ email, password })
 
-  axios.post('http://localhost:3001/api/v1/login', body, {
+  axios.post('/api/v1/login', body, {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"

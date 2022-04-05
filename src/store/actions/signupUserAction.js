@@ -13,7 +13,7 @@ export const signupUser = ({ first_name, last_name, email, password }) => (dispa
     }
   })
 
-  axios.post('http://localhost:3001/api/v1/users', body, {
+  axios.post('/api/v1/users', body, {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"

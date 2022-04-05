@@ -3,7 +3,7 @@ import axios from 'axios';
 export function getStations() {
   return (dispatch) => {
 
-    axios.get('http://localhost:3001/api/v1/stations')
+    axios.get('/api/v1/stations')
     .then(response => {
       if (response.data) {
         dispatch({
@@ -19,7 +19,7 @@ export function getStations() {
 export function home() {
   return (dispatch) => {
 
-    axios.get('http://localhost:3001/home')
+    axios.get('/home')
     .then(response => {
       dispatch({
         type   : 'MESSAGE',

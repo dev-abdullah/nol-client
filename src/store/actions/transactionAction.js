@@ -16,7 +16,7 @@ export const depositTransaction = ({ deposit_amount, card_id }) => (dispatch) =>
     card_id: card_id
   })
 
-  axios.post('http://localhost:3001/api/v1/transactions', body, {
+  axios.post('/api/v1/transactions', body, {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"
@@ -48,7 +48,7 @@ export const withdrawTransaction = ({medium, station_from, station_to, card_id})
     card_id: card_id
   })
 
-  axios.post('http://localhost:3001/api/v1/transactions', body, {
+  axios.post('/api/v1/transactions', body, {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"
@@ -73,7 +73,7 @@ export const withdrawTransaction = ({medium, station_from, station_to, card_id})
 export const getTransactions = (card_id) => (dispatch) => {
   const body = JSON.stringify({ card_id: card_id })
 
-  axios.get(`http://localhost:3001/api/v1/transactions?card_id=${card_id}`)
+  axios.get(`/api/v1/transactions?card_id=${card_id}`)
   .then(resp => {
     let data = resp.data
     if (data.length > 0) {

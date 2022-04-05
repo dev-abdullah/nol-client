@@ -4,7 +4,7 @@ import { LOADING_USER, GET_USER_SUCCESS, GET_USER_ERRORS, GET_USER_FAILURE } fro
 export const getUser = (token) => (dispatch) => {
   dispatch({ type:LOADING_USER })
 
-  axios.post('http://localhost:3001/api/v1/auto_login', {}, {
+  axios.post('/api/v1/auto_login', {}, {
     headers: {
       Authorization: `Bearer ${token}`
     }

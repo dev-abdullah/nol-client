@@ -2,6 +2,7 @@
   "name": "nol-client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://nol-system.herokuapp.com",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",

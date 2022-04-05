@@ -91,34 +91,6 @@ class SwipeCard extends Component {
             </div>
           </div>
         </div>
-        <div className="col-12 mt-5">
-          <div className="card w-75 mx-auto">
-            <div className="card-body">
-              <h5> Last 5 Transactions </h5>
-              <div className="row">
-                <div className="col-3">Image</div>
-                <div className="col-9">
-                  <p>Mall of Emirates to Expo 2020</p>
-                  <p className="text-danger">AED 7.50</p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-3">Image</div>
-                <div className="col-9">
-                  <p>Mall of Emirates to Expo 2020</p>
-                  <p className="text-danger">AED 7.50</p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-3">Image</div>
-                <div className="col-9">
-                  <p>Mall of Emirates to Expo 2020</p>
-                  <p className="text-danger">AED 7.50</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     );
     return markup;

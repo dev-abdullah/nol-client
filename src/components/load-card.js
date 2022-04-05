@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { useNavigate } from 'react-router-dom';
@@ -10,13 +10,6 @@ function LoadCard(props) {
   const navigate = useNavigate();
   const { userCard, depositTransaction, creditTransaction } = props
   const [amount, setAmount] = useState('')
-
-  // useEffect(() => {
-  //   if (creditTransaction && creditTransaction.id) {
-  //     navigate('/load_card')
-  //   }
-  // })
-
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -58,34 +51,6 @@ function LoadCard(props) {
           <div className="card-body">
             <p>Your Current Balance </p>
             <h3>AED {userCard.balance}</h3>
-          </div>
-        </div>
-      </div>
-      <div className="col-6 mt-5">
-        <div className="card w-75">
-          <div className="card-body">
-            <h5> Last 5 Transactions </h5>
-            <div className="row">
-              <div className="col-3">Image</div>
-              <div className="col-9">
-                <p>Mall of Emirates to Expo 2020</p>
-                <p className="text-danger">AED 7.50</p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-3">Image</div>
-              <div className="col-9">
-                <p>Mall of Emirates to Expo 2020</p>
-                <p className="text-danger">AED 7.50</p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-3">Image</div>
-              <div className="col-9">
-                <p>Mall of Emirates to Expo 2020</p>
-                <p className="text-danger">AED 7.50</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
