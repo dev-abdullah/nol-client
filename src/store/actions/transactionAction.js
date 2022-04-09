@@ -8,6 +8,8 @@ import {
   GET_TRANSACTIONS
 } from '../action-types/transaction';
 
+import { SET_USER_CARD } from '../action-types/user';
+
 export const depositTransaction = ({ deposit_amount, card_id }) => (dispatch) => {
   dispatch({ type: LOADING_TRANSACTION })
 
@@ -26,6 +28,7 @@ export const depositTransaction = ({ deposit_amount, card_id }) => (dispatch) =>
     let data = resp.data
     if (data.transaction.id !== undefined) {
       alert("Successfully Deposit amount")
+      dispatch({ type: SET_USER_CARD, payload: data.card })
       return dispatch({ type: POST_TRANSACTION_SUCCESS, payload: data })
     } else {
       alert(data.errors.map(error => error))
@@ -58,6 +61,7 @@ export const withdrawTransaction = ({medium, station_from, station_to, card_id})
     let data = resp.data
     if (data.transaction.id !== undefined) {
       alert("Successfully swipe amount")
+      dispatch({ type: SET_USER_CARD, payload: data.card })
       return dispatch({ type: POST_SWIPE_TRANSACTION_SUCCESS, payload: data })
     } else {
       alert(data.errors.map(error => error))
@@ -71,7 +75,6 @@ export const withdrawTransaction = ({medium, station_from, station_to, card_id})
 }
 
 export const getTransactions = (card_id) => (dispatch) => {
-  const body = JSON.stringify({ card_id: card_id })
 
   axios.get(`/api/v1/transactions?card_id=${card_id}`)
   .then(resp => {

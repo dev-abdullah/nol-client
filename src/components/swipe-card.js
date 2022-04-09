@@ -19,7 +19,7 @@ class SwipeCard extends Component {
 
   render() {
     let markup = ''
-    const { stations, signedInUser, userCard, withdrawTransaction } = this.props
+    const { stations, userCard, withdrawTransaction } = this.props
     const { medium, stationFrom, stationTo } = this.state
 
     const handleMedium = (e) => {
@@ -100,7 +100,6 @@ class SwipeCard extends Component {
 function mapStateToProps({stationReducer, userReducer}) {
   return {
     stations: stationReducer.stations,
-    signedInUser: userReducer.user,
     userCard: userReducer.card
   }
 }

@@ -87,7 +87,7 @@ function Sidebar(props) {
       ]
     }
     setItems(data)
-  })
+  }, [signedinUser])
 
   return (
     <>

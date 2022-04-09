@@ -1,5 +1,10 @@
 import axios from 'axios';
-import { LOADING_USER, GET_USER_SUCCESS, GET_USER_ERRORS, GET_USER_FAILURE } from '../action-types/user';
+import {
+  LOADING_USER,
+  GET_USER_SUCCESS,
+  GET_USER_ERRORS,
+  GET_USER_FAILURE
+} from '../action-types/user';
 
 export const getUser = (token) => (dispatch) => {
   dispatch({ type:LOADING_USER })

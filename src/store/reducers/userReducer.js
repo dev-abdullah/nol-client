@@ -8,7 +8,8 @@ import {
   SIGN_IN_FAILURES,
   GET_USER_SUCCESS,
   GET_USER_ERRORS,
-  GET_USER_FAILURE
+  GET_USER_FAILURE,
+  SET_USER_CARD
 } from '../action-types/user';
 
 const initialState = {
@@ -56,6 +57,9 @@ const userReducer = ( state = initialState, action) => {
 
     case GET_USER_FAILURE:
       return {...state, isLoading: false, error: action.payload}
+
+    case SET_USER_CARD:
+      return {...state, card: action.payload}
 
     default:
       return state

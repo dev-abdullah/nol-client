@@ -8,7 +8,7 @@ import { depositTransaction } from '../store/actions/transactionAction';
 function LoadCard(props) {
 
   const navigate = useNavigate();
-  const { userCard, depositTransaction, creditTransaction } = props
+  const { userCard, depositTransaction } = props
   const [amount, setAmount] = useState('')
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -59,10 +59,9 @@ function LoadCard(props) {
   return markup;
 }
 
-function mapStateToProps({ userReducer, transactionReducer }) {
+function mapStateToProps({ userReducer }) {
   return {
-    userCard: userReducer.card,
-    creditTransaction: transactionReducer.creditTransaction
+    userCard: userReducer.card
   }
 }
 

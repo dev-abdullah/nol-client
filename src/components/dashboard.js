@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { useNavigate } from 'react-router-dom';
@@ -51,7 +50,7 @@ function Dashboard(props) {
             <h5> Last 5 Transactions </h5>
             <div className="row">
               <div className="col-3">
-                <img src={metro} width="80" height="70" />
+                <img alt="Metro" src={metro} width="80" height="70" />
               </div>
               <div className="col-9">
                 <p>Mall of Emirates to Expo 2020</p>
@@ -60,7 +59,7 @@ function Dashboard(props) {
             </div>
             <div className="row">
               <div className="col-3">
-                <img src={bus} width="80" height="70" />
+                <img alt="Bus" src={bus} width="80" height="70" />
               </div>
               <div className="col-9">
                 <p>Mall of Emirates to Expo 2020</p>
@@ -69,7 +68,7 @@ function Dashboard(props) {
             </div>
             <div className="row">
               <div className="col-3">
-                <img src={metro} width="80" height="70" />
+                <img alt="Metro" src={metro} width="80" height="70" />
               </div>
               <div className="col-9">
                 <p>Mall of Emirates to Expo 2020</p>

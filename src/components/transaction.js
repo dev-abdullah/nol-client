@@ -15,7 +15,7 @@ class Transaction extends Component {
   }
 
   render() {
-    const { userCard, transactions, getTransactions } = this.props
+    const { transactions } = this.props
     let markup = ''
     markup = (
       <div className="d-flex flex-row row mt-5">
@@ -38,7 +38,7 @@ class Transaction extends Component {
                     return (
                       <tr key={transaction.id}>
                         <td>
-                          <img src={transaction.medium === 'metro' ? Metro : Bus} width="25" height="20" />
+                          <img alt={transaction.medium} src={transaction.medium === 'metro' ? Metro : Bus} width="25" height="20" />
                           {transaction.station_from} to {transaction.station_to}
                         </td>
                         <td>{transaction.transaction_date}</td>
@@ -63,9 +63,8 @@ class Transaction extends Component {
   }
 }
 
-function mapStateToProps({userReducer, transactionReducer}) {
+function mapStateToProps({transactionReducer}) {
   return {
-    userCard: userReducer.card,
     transactions: transactionReducer.transactions
   }
 }

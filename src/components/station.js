@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { getStations, home } from '../store/actions/stationAction';
+import { getStations } from '../store/actions/stationAction';
 
 class Station extends Component {
   componentDidMount() {
@@ -10,7 +10,7 @@ class Station extends Component {
   }
 
   render() {
-    const { stations, message, signedInUser } = this.props
+    const { stations } = this.props
     let markup = ''
     let zone1 = ''
     let zone2 = ''
@@ -70,11 +70,9 @@ class Station extends Component {
   }
 }
 
-function mapStateToProps({stationReducer, userReducer}) {
+function mapStateToProps({stationReducer}) {
   return {
-    stations: stationReducer.stations,
-    message: stationReducer.message,
-    signedInUser: userReducer.user
+    stations: stationReducer.stations
   }
 }
 
